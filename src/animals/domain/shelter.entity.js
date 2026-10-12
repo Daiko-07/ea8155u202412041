@@ -1,7 +1,7 @@
 export class ShelterAnimal {
-    constructor(locationId, dogbreed , petName) {
+    constructor(locationId, dogBreed , petName) {
         this.locationId = locationId;
-        this.dogbreed = dogbreed;
+        this.dogBreed = dogBreed;
         this.petName = petName;
         this.registeredAt = new Date().toISOString();
     }
