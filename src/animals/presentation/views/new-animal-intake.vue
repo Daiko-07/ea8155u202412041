@@ -238,18 +238,11 @@ const createAnimal = async () => {
           />
 
 
-
           <p v-if="location">
             {{ t('availableCapacity') }}:
             {{ store.getAvailableCapacity(location) }}
           </p>
-
-
-
           <label for="breed">{{ t('breed') }}</label>
-
-
-
           <pv-select
 
               inputId="breed"

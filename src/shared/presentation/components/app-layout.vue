@@ -11,25 +11,15 @@ const { t, locale } = useI18n()
     <pv-toolbar class="topbar">
       <template #start>
         <div class="flex align-items-center gap-3">
-
           <img
-
               src="https://img.logo.dev/pawsandclaws.org?token=pk_anonymous"
-
               alt="Paws and Claws"
-
               class="brand-logo"
-
               @error="$event.target.style.display = 'none'"
-
           />
-
           <strong>Paws & Claws Rescue Management</strong>
-
         </div>
-
       </template>
-
     </pv-toolbar>
 
 
