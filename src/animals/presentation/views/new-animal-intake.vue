@@ -10,29 +10,16 @@ import { useShelterStore } from '../../application/shelter.store.js'
 import { ShelterAnimal } from '../../domain/shelter.entity.js'
 import {
   getDogBreeds,
-
   getBreedImage
 
 } from '../../../breeds/infrastructure/breeds-api.js'
-
-
-
 const router = useRouter()
-
 const { t } = useI18n()
-
 const store = useShelterStore()
-
-
-
 const location = ref(null)
-
 const breed = ref(null)
-
 const petName = ref('')
-
 const breeds = ref([])
-
 const image = ref('')
 
 const errorKey = ref('')
@@ -48,13 +35,10 @@ onMounted(async () => {
       getDogBreeds().then(data => {
         breeds.value = data
       })
-
     ])
 
   } catch {
-
     errorKey.value = 'loadError'
-
   }
 
 })
@@ -64,8 +48,6 @@ onMounted(async () => {
 const filteredBreeds = computed(() => {
 
   if (!location.value) return []
-
-
 
   const allowed = String(location.value.dogBreeds || '')
 
@@ -258,11 +240,8 @@ const createAnimal = async () => {
 
 
           <p v-if="location">
-
             {{ t('availableCapacity') }}:
-
             {{ store.getAvailableCapacity(location) }}
-
           </p>
 
 

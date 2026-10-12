@@ -19,13 +19,10 @@ export const useShelterStore = defineStore('shelter', () => {
                 getShelterAnimals()
             ])
             locations.value = locationData
-
             animals.value = animalData
 
         } finally {
-
             loading.value = false
-
         }
 
     }
@@ -45,43 +42,24 @@ export const useShelterStore = defineStore('shelter', () => {
 
 
     const getAvailableCapacity = (location) => {
-
         return Number(location.maxCapacity) -
-
             getAnimalsByLocation(location.id).length
-
     }
-
-
 
     const addAnimal = async (animal) => {
-
         const created = await createShelterAnimal(animal)
-
         animals.value.push(created)
-
         return created
-
     }
 
-
-
     return {
-
         locations,
-
         animals,
-
         loading,
-
         loadData,
-
         getAnimalsByLocation,
-
         getAvailableCapacity,
-
         addAnimal
-
     }
 
 })

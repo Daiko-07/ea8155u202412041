@@ -26,9 +26,7 @@ const router = createRouter({
                     name: 'new-animal-intake',
                     component: NewAnimalIntake
                 }
-
             ]
-
         },
 
         {
@@ -36,11 +34,7 @@ const router = createRouter({
             name: 'page-not-found',
             component: PageNotFound
         }
-
     ]
-
 })
-
-
 
 export default router
